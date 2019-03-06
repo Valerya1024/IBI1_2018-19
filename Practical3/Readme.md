@@ -1,9 +1,8 @@
-thingsilike
- I like cats
- I like sunshine.
- I like roses.
- I like birds.
- I like cherries.
- I like starry sky.
- I like games.
- I like movies.
+# This is a heading
+## This is another (smaller) heading
+
+- this is the beginning of a list
+- this is the next item in the list
+- and the next
+
+[This is a link to a website](https://github.com/)
