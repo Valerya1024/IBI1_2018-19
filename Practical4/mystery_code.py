@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: 
+# Answer: select the prime numbers
 
 # Import libraries
 # randint allows drawing a random number, 
@@ -22,4 +22,3 @@ while p==False:
 
      
 print(n)
-            
