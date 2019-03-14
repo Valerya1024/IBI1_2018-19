@@ -14,13 +14,11 @@ a = str(n)+' is '
 for i in range(13):
     #x as exponent
     x=12-i
+    #if n is smaller than 2**x, skip x
     #if n is larger than 2**x, add x
-    if n > 2**x:
+    #if n = 2**x, store x, end process
+    if n >= 2**x:
         n = n - 2**x
         a+='2**'+str(x)+' + '
-    #if n is smaller than 2**x, skip x
-    #if n = 2**x, store x, end process
-    elif n == 2**x:
-        n=n-2**x
-        a+='2**'+str(x)
-print(a)
+    b = a[:-3]
+print(b)
