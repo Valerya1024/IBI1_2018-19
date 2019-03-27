@@ -6,11 +6,13 @@ Created on Wed Mar 20 09:22:30 2019
 """
 
 from matplotlib import pyplot as plt
-DNA = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+DNA = input("Give me a sequence of DNA:")
 A = DNA.count("A", 0, len(DNA))
 G = DNA.count("G", 0, len(DNA))
 C = DNA.count("C", 0, len(DNA))
 T = len(DNA) - A - G - C
+Dict = {"A":A,"G":G,"C":C,"T":T}
+print(Dict)
 sizes = [A,G,C,T]
 labels = ["A","G","C","T"]
 colors='yellowgreen','gold','lightskyblue','lightcoral'
