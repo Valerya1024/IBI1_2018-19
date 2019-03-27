@@ -45,7 +45,8 @@ for i in range(len(addresses)):
     receivers = addresses[i]
     name=names[i]
     subject=subjects[i]
-    
+    body=re.sub(r'User',name,body)
+
     message = MIMEText(body, 'plain', 'utf-8')
     message['From'] = Header("824", 'utf-8')
     message['To'] =  Header(name, 'utf-8')
