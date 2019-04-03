@@ -14,9 +14,10 @@ def compute(x,y,Op):
     elif Op=='*':return x*y
     elif Op=='-':return x-y
     else:return x/y if y != 0 else None
-L = re.split(r',',input("Please input 4 numbers to computer 24:(use ',' to divide them)"))
-L = [int(L[0]),int(L[1]),int(L[2]),int(L[3])]
-if not 0<L[0]<24 or not 0<L[1]<24 or not 0<L[2]<24 or not 0<L[3]<24:
+L = re.split(r',',input("Please input 4 numbers to compute 24:(use ',' to divide them)"))
+for i in range(len(L)):
+    L[i] = int(L[i])
+if max(L)>23 or min(L)<1:
     print("The input number must be integers from 1 to 23")
 else:
     sequence = list(itertools.permutations(L,4))[::]
@@ -46,5 +47,5 @@ else:
     else:
         print("No")
     time_end=time.time()
-    print("Recursion times:", int(time_end-time_start))
+    print("Recursion times:", int((time_end-time_start)*100))
         
