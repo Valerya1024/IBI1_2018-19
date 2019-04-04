@@ -7,7 +7,7 @@ Created on Wed Apr  3 09:02:08 2019
 
 import re
 from fractions import Fraction
-L = re.split(r',',input("Please input numbers to compute 24:(use ',' to divide them)"))
+L = re.split(r',',input("Please input numbers to compute 24:(use ',' to divide them)\n"))
 num = list(map(int,L))
 if max(num)>23 or min(num)<1:
     print("The input number must be integers from 1 to 23")

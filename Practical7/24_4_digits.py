@@ -14,7 +14,9 @@ def compute(x,y,Op):
     else:return x/y if y != 0 else None
 L = re.split(r',',input("Please input 4 numbers to compute 24:(use ',' to divide them)\n"))
 L = list(map(int,L))
-if max(L)>23 or min(L)<1:
+if len(L) != 4 :
+    print("Please try in file 24_n_digits.py" )
+elif max(L)>23 or min(L)<1:
     print("The input number must be integers from 1 to 23")
 else:
     sequence = list(itertools.permutations(L,4))[::]
