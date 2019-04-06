@@ -35,9 +35,6 @@ else:
                 S = sequence[i]
                 for i in range(len(operator)-1):
                     O = operator[i]
-                    a = compute(S[0],S[1],O[0])
-                    b = compute(a,S[2],O[1])
-                    c = compute(S[2],S[3],O[2])
                     if compute(compute(compute(S[0],S[1],O[0]),S[2],O[1]),S[3],O[2]) == 24:
                         x += 1
                         print("(("+str(S[0])+O[0]+str(S[1])+")"+O[1]+str(S[2])+")"+O[2]+str(S[3]))
