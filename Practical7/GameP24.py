@@ -28,18 +28,18 @@ def calculation(operation):
             print("Invalid calculation") 
             return None
 
-x = y = 0
-if x == 0:
+x = 0
+while x == 0:
     a = random.randint(1,13)
     b = random.randint(1,13)
     c = random.randint(1,13)
     d = random.randint(1,13)
     num = [a,b,c,d]
-    num_origin = num[::]
     sequence = list(itertools.permutations(num,4))[::]
     operations = ['+','-','*','/']
     op = list(itertools.combinations_with_replacement(operations,3))[::]
     operator = []
+    ans = ''
     for i in range(len(op)-1):
         operator += list(itertools.permutations(op[i],3))[::]
     operator = sorted(set(operator))
@@ -71,13 +71,14 @@ if x == 0:
 
 start_time = time.time()
 while len(num)>1:
+    num = list(map(float,num))
     print(num)
-    operation = re.split(r'(\W)',input("Please choose 2 numbers above to do calculation:\n"))
+    operation = re.split(r'([-\+*/])',input("Please choose 2 numbers above to do calculation:\n"))
     if operation == ['undo']:
-        num = num_origin[::]
+        num = list(map(float,[a,b,c,d]))
     elif float(operation[0]) in num and float(operation[2]) in num:
-        num.remove(int(operation[0]))
-        num.remove(int(operation[2]))
+        num.remove(float(operation[0]))
+        num.remove(float(operation[2]))
         num.append(calculation(operation))
     else:
         print("Invalid calculation")
