@@ -3,7 +3,30 @@
 Created on Wed Apr  3 17:27:52 2019
 
 @author: Valerya
+
+This is not the file required, never grade it
+EXAMPLE
+[13.0, 12.0, 4.0, 10.0]
+Please choose 2 numbers above to do calculation:
+12-4
+[13.0, 10.0, 8.0]
+Please choose 2 numbers above to do calculation:
+13-8
+[10.0, 5.0]
+Please choose 2 numbers above to do calculation:
+undo
+[13.0, 12.0, 4.0, 10.0]
+Please choose 2 numbers above to do calculation:
+12-4
+[13.0, 10.0, 8.0]
+Please choose 2 numbers above to do calculation:
+13-10
+[8.0, 3.0]
+Please choose 2 numbers above to do calculation:
+8*3
+24! Total time = 58
 """
+
 
 import random
 import re
