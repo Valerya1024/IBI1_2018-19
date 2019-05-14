@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: it outputs a prime number between 1 and 100
+# Answer: it outputs 1 or a prime number between 3 and 97 (3 and 97 included)
 
 # Import libraries
 # randint allows drawing a random number, 
@@ -19,6 +19,4 @@ while p==False:
         if n%i == 0:
             p=False
 
-
-     
 print(n)
