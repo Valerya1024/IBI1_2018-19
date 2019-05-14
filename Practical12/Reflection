@@ -1,0 +1,15 @@
+I learnt to use //.
+
+In SIR_vaccination model, I noticed the infected decreased too quickly as the vaccination rate increase.. 
+I later found it was because assigned the value to S outside the vaccination rates loop. 
+So when the loop began, S still had the value assigned to it at the end of the last loop.
+Then I assigned a new value to S at the beginning of the vaccination rates loop.
+
+I learned to use axes.
+
+I completed Spatial_SIR_vac model by adding a vaccinated rate (V) and random transformation of 0 to 3.
+vac = np.random.choice(range(10000), int(10000*V), replace=False)
+for v in vac:
+    population[v//100][v%100] = 3
+
+I am trying to produce an GIF with the Spatial_SIR model.
