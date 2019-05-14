@@ -13,3 +13,4 @@ for v in vac:
     population[v//100][v%100] = 3
 
 I am trying to produce an GIF with the Spatial_SIR model.
+update: I made a 100-frame gif with matplotlib.animation
