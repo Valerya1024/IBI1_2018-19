@@ -16,10 +16,10 @@ csv_file = open('address_information1.csv','r')
 file = csv_file.read()
 
 mail_host="smtp.zju.edu.cn"
-mail_user="3180111***@zju.edu.cn"
-mail_pass="********" 
+mail_user="3180111439@zju.edu.cn"
+mail_pass="********"
 
-sender = '3180111***@zju.edu.cn'
+sender = '3180111439@zju.edu.cn'
 
 rows = re.split(r'[\n]',file)
 names=[]
@@ -28,33 +28,35 @@ subjects=[]
 
 for i in range(1,len(rows)):
     info = re.split(r'[,]',rows[i])
-    if '.com' in info[1]:
+    if re.match(r'\w+@\w+\.\w+',info[1]):
         addresses.append(info[1])
+        names.append(info[0])
+        subjects.append(info[2])
         print(info[1]+' :Correct Address!')
     else:
         print(info[1]+' :Wrong Address!')
-        continue
-    
-    names.append(info[0])
-    subjects.append(info[2])
     
 print("From: "+sender+'\nPassword: '+mail_pass)
     
 for i in range(len(addresses)):
 
-    receivers = addresses[i]
+    receivers = '1204867792@qq.com'
     name=names[i]
     subject=subjects[i]
-    body=re.sub(r'User',name,body)
+    body_r=re.sub(r'User',name,body)
 
-    message = MIMEText(body, 'plain', 'utf-8')
-    message['From'] = Header("824", 'utf-8')
+    message = MIMEText(body_r, 'plain', 'utf-8')
+    message['From'] = Header('Val', 'utf-8')
     message['To'] =  Header(name, 'utf-8')
     message['Subject'] = Header(subject, 'utf-8')
  
-    smtpObj = smtplib.SMTP() 
-    smtpObj.connect(mail_host, 25)
-    smtpObj.login(mail_user,mail_pass)  
-    smtpObj.sendmail(sender, receivers, message.as_string())
+    try:
+        smtpObj = smtplib.SMTP() 
+        smtpObj.connect(mail_host, 25)
+        smtpObj.login(mail_user,mail_pass)  
+        smtpObj.sendmail(sender, receivers, message.as_string())
     
-    print("Mail sent successfully!")
+        print("Mail sent successfully!")
+        
+    except smtplib.SMTPException:
+        print ("Error! Can not send the email.")
