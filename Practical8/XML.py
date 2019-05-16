@@ -17,7 +17,7 @@ def findchildren(id,children):
             parents = term.getElementsByTagName('is_a')
             for parent in parents:
                 if parent.childNodes[0].data == id:
-                    childid = term.getElementsByTagName('id')
+                    childid = term.getElementsByTagName('id')[0].childNodes[0].data
                     children.append(childid)
                     findchildren(childid,children)
     return len(children)
@@ -31,5 +31,5 @@ for term in genes:
         name = term.getElementsByTagName('name')[0].childNodes[0].data
         children = []
         autophagosome = autophagosome.append(pd.DataFrame({'id':[id],'name':[name],'definition':[defstr],'childnodes':[findchildren(id,children)]}))
-        
-autophagosome.to_excel('C:/Users/surface/.spyder-py3/python script/Practical 8/autophagosome.xlsx', index=False)
+
+autophagosome.to_excel('autophagosome.xlsx', index=False)
