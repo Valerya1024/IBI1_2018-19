@@ -1,0 +1,25 @@
+edit_distance
+    hm_SOD,ms_SOD 23
+    hm_SOD,rd_SOD 210
+    ms_SOD,rd_SOD 209
+
+percetage_identity
+    hm_SOD,ms_SOD 89.63963963963964%
+    hm_SOD,rd_SOD 5.405405405405405%
+    ms_SOD,rd_SOD 5.8558558558558556%
+
+Score
+    hm_SOD,ms_SOD 1091
+    hm_SOD,rd_SOD -250
+    ms_SOD,rd_SOD -250
+
+Score_per_AA
+    hm_SOD,ms_SOD 4.914414414414415
+    hm_SOD,rd_SOD -1.1261261261261262
+    ms_SOD,rd_SOD -1.1261261261261262
+
+BLOSUM62 compares a single amino acid with another amino acid, 
+the more similar their structures are, the higher score the combination gets.
+
+The higher BLOSUM score per AA two peptide get, the more similar they are.
+human SOD is much more similar to the mouse SOD (4.91) than to the random sequence (-1.12).
