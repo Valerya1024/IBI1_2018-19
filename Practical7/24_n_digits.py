@@ -2,7 +2,7 @@
 """
 Created on Wed Apr  3 09:02:08 2019
 
-@author: Valerya, inspired by yangjiaolei
+@author: Valerya (adapted from 7_24_Game.py by yangjiaolei)
 """
 
 from fractions import Fraction
