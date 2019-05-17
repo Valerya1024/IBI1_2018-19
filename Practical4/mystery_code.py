@@ -20,3 +20,7 @@ while p==False:
             p=False
 
 print(n)
+
+# The answer to what the mystery code does is quite vague. Does it select all the prime numbers? Where does it select them from?
+# origin answer: select prime numbers
+# corrected: it outputs 1 or a prime number between 3 and 97 (3 and 97 included)
