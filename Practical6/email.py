@@ -12,7 +12,7 @@ from email.header import Header
 txt_file = open('body.txt','r')
 body = txt_file.read()
 
-csv_file = open('address_information1.csv','r')
+csv_file = open('address_information.csv','r')
 file = csv_file.read()
 
 mail_host="smtp.zju.edu.cn"
@@ -25,6 +25,9 @@ rows = re.split(r'[\n]',file)
 names=[]
 addresses=[]
 subjects=[]
+
+csv_file.close()
+txt_file.close()
 
 for i in range(1,len(rows)):
     info = re.split(r'[,]',rows[i])
@@ -40,7 +43,7 @@ print("From: "+sender+'\nPassword: '+mail_pass)
     
 for i in range(len(addresses)):
 
-    receivers = '1204867792@qq.com'
+    receivers = addresses[i]
     name=names[i]
     subject=subjects[i]
     body_r=re.sub(r'User',name,body)
