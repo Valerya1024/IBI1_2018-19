@@ -8,7 +8,7 @@ Created on Mon May  6 16:15:04 2019
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-b = 0.3; y = 0.05; T = 500 # b for beta, y for gamma
+b = 0.3; y = 0.05; T = 1000 # b for beta, y for gamma
 a = []
 def chance(P,n):
     c = list(np.random.choice(range(2),n,p=[1-P,P]))
