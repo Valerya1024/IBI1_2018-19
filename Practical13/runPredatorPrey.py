@@ -89,27 +89,27 @@ def Plot():
 def Change_value():
     for parameter in parameters:
         ID = parameter.getAttribute("id")
-        parameter.setAttribute("value",input(ID+'='))
+        parameter.setAttribute("value",input(ID+'=')) #change value according to input
     xml_to_cps()
 #6
 def Random_value():
     n = input('run_times=')
     data = []
     k = []
-    for i in range(int(n)):
+    for i in range(int(n)): #run n times
         rnd = list(np.random.sample(4)) #generate 4 random value between 0 and 1
         for i in range(4):
             k.append(parameters[i].getAttribute("id"))
-            parameters[i].setAttribute("value",rnd[i])
+            parameters[i].setAttribute("value",rnd[i]) #change value to random value
         xml_to_cps()
         os.system('CopasiSE.exe predator-prey.cps')
         res = pd.read_csv('modelResults.csv')
         data.append(rnd+[round(max(res['[A]'])),round(max(res['[B]']))])
     
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data) #a dataframe of k and max prey and predator
     df.columns=[k[0],k[1],k[2],k[3],'predator max','prey max']
     print(df)
-    df.to_excel('random_k.xlsx', index=False)
+    df.to_excel('random_k.xlsx', index=False) #save xlsx file
 
 x = input('Select function:\nA.default values B.change values C.random values\n')
 if x == 'A':
