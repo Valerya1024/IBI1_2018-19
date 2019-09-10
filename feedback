@@ -1,0 +1,52 @@
+
+
+ 
+A
+B
+1
+Wu Xinyu
+https://github.com/Valerya1024
+2
+ 
+ 
+3 
+Feedback Weeks 3-5:
+ 
+4 
+The file name doesn't include student name
+ 
+5 
+There is no response to feedback file.  Otherwise everything is OK.
+ 
+6 
+You responded perfectly to the feedback from weeks 3 to 5
+ 
+7 
+ 
+ 
+8 
+Feedback Week 12
+ 
+9 
+Week 12 is perfect. Well done for producing a gif file as well :) 
+ 
+10 
+Great job! Well coded, and I really liked that you made the gif as a unique visual!
+ 
+11 
+ 
+ 
+12 
+Feedback Week 13
+ 
+13 
+There is code to allow the user to input parameters or set random parameters and to keep track of those choices and run the model. But there is no actual change being made to the xml file, so the model being run will always be the same as the original xml file. (This can be seen when choosing option C and running several simulations with different random numbers: prey max and predator max always come out as the same, which is actually highly unlikely.) 
+ 
+14 
+Nice touch to give users 3 different options as to how to run the model
+ 
+15 
+Very nice format with the A, B, C choices!
+ 
+
+ 96
